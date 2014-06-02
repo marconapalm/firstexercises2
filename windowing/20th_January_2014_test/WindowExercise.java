@@ -1,3 +1,15 @@
+﻿/*
+* Si definisca una applicazione grafica costituita da una finestra che contiene (in questo ordine):
+* un bottone, una label ed un campo di testo destinato a contenere valori numerici.
+* Cliccando sul bottone deve avvenire:
+* sulla label compare il quoziente reale fra il valore contenuto nel campo di testo ed il numero di
+* volte che il bottone è stato premuto dal’avvio dell’applicazione
+* Nel caso in cui il campo di testo non contenga un numero, si scriva nel campo di testo il valore 10.
+*
+* Developed by Marco Rapaccini on 2/06/2014
+*
+*/
+
 import javax.swing.*;	// importo i widget necessari
 import java.awt.*;	// importo il BorderLayout
 import java.awt.event.*;	// importo ActionEvent e ActionListener
