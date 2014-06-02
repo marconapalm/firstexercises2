@@ -21,7 +21,7 @@ class WindowExercise{
 	JLabel label;
 	JTextField field;
 
-	static double contatore = 0;	// definisco un contatore per quante volte è stato premuto il button
+	double contatore = 0;	// definisco un contatore per quante volte è stato premuto il button
 
 	public static void main (String[] args){
 		WindowExercise gui = new WindowExercise();
