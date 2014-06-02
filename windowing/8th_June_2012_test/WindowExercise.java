@@ -1,4 +1,4 @@
-/*
+﻿/*
 * Si definisca una applicazione grafica costituita da una finestra che contiene (in questo
 * ordine): tre campi di testo (il primo dei quali è destinato a contenere numeri interi) ed un
 * bottone. Cliccando sul bottone deve avvenire:
@@ -6,6 +6,9 @@
 * testo e la lunghezza della stringa contenuta nel secondo campo di testo .
 * se il primo campo di testo non contiene un numero, nel terzo campo di testo deve
 * comparire 0.
+*
+* Developed by Marco Rapaccini on 01/06/2014
+*
 */
  
 import javax.swing.*;	// importo il package con widget come JFrame, JPanel, etc.
