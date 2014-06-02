@@ -3,8 +3,11 @@
  * Cliccando sul bottone deve avvenire:
  * nella label compare la media dei valori contenuti nei due campi di testo.
  * se i campi di testo non contengono un numero, nella label deve comparire 0.
- 
+ * 
+ * Developed by Marco Rapaccini on 02/06/2014
+ *
  * I used only the java.awt package. I didn't use Swing.
+ *
 */
 
 
