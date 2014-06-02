@@ -1,4 +1,4 @@
-/*
+﻿/*
 * Si definisca una applicazione grafica costituita da una finestra che contiene (in questo ordine): un
 * bottone, una canvas (o un pannello) ed un campo di testo destinato a contenere valori numerici.
 * Cliccando sul bottone deve avvenire:
@@ -7,6 +7,9 @@
 * verde.
 * Nel caso in cui il campo di testo non contenga un numero intero, si colori la canvas (o il pannello)
 * di giallo e si scriva nel campo di testo il valore 3.
+*
+* Developed by Marco Rapaccini on 01/06/2014
+*
 */
  
 import javax.swing.*;	// importo il package contenente tutti i componenti come JFrame, JPanel, JButton e JTextField
