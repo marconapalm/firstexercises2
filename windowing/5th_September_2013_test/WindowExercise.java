@@ -18,7 +18,7 @@ import java.awt.event.*;	// importo il package contenente ActionListener e Actio
  
 public class WindowExercise {
 	
-	int button_pressed = 0;	// contatore destinato a contenere quante volte il pulsante button è stato premuto
+	static int button_pressed = 0;	// contatore destinato a contenere quante volte il pulsante button è stato premuto
 	
 	JFrame frame;	// definisco un frame
 	JButton button;	// definisco un button
