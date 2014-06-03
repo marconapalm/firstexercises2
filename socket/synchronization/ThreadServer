@@ -1,0 +1,59 @@
+package server3;
+
+import java.net.*;
+import java.io.*;
+
+
+public class ThreadServer3 extends Thread {
+    Socket client;  // definisco un Socket per il client
+    DataInputStream stream; // definisco un DataInputStream
+    Accumulatore a;
+    
+    // definisco il costruttore
+    public ThreadServer3(Socket client,Accumulatore a){
+        // passo al costruttore il Socket rappresentante la connessione col client
+        // e lo passo all'apposita variabile d'istanza
+        this.client = client;
+        // passo al costruttore anche l'accumulatore
+        this.a = a;
+    }
+    
+    // faccio l'override del metodo run
+    @Override
+    public void run(){  
+        try{
+            // ottengo un nuovo flusso di dati in input
+            stream = new DataInputStream(client.getInputStream());
+            
+            int somma = 0;
+            int contatore = 0;
+            int numero = 0;
+            
+            // ciclo fin quando non finisce la sequenza di numeri
+            while((numero=stream.readInt())!=-1){
+                // ad ogni iterazione
+                somma+=numero;  // aggiungo il numero letto alla somma
+                contatore++;    // incremento il contatore di numeri letti
+                System.out.println("Ricevuto il numero: " + numero);
+            }
+            // una volta finito il ciclo, posso inviare all'accumulatore
+            // i nuovi dati
+            a.incrementa(somma, contatore);
+            
+            // devo gestire l'accesso a queste informazioni in modo sincronizzato
+            synchronized (a){
+                System.out.println("La somma finora ottenuta è: " + a.getSomma());
+                System.out.println("La media finora ottenuta è: " + a.getMedia());
+            }
+            
+            // una volta finito posso chiudere
+            stream.close();  // il flusso
+            client.close();  // e il client
+            
+            
+        }catch(IOException ex){
+            ex.printStackTrace();
+        }
+    }
+    
+}
