@@ -1,4 +1,4 @@
-java_university_exercises
+firstexercises2
 =========================
 
-Some Java exercises I've done at the University
+First Java exercises I did at the University.
